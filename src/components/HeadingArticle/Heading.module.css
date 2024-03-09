@@ -1,0 +1,35 @@
+.heading {
+  height: 110px;
+  padding-top: clamp(8px, 0.225rem + 0.75vw, 18px);
+  margin-bottom: clamp(15px, 0.5rem + 2.19vw, 50px);
+
+  background-image: url("../../../public/icons/heading-figure.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.heading h2 {
+  text-align: left;
+
+  font-family: var(--text-font-accent);
+  font-size: clamp(20px, 1rem + 1.25vw, 40px);
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .heading {
+    height: 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .heading {
+    height: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .heading {
+    height: auto;
+  }
+}

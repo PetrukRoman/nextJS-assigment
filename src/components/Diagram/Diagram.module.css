@@ -1,0 +1,18 @@
+.textContainer {
+  color: var(--text-main);
+  font-size: clamp(14px, 0.748rem + 0.63vw, 24px);
+  margin-bottom: clamp(1.25rem, 0.794rem + 2.28vw, 3.5rem);
+}
+
+.textContainer p:first-of-type {
+  margin-bottom: 9px;
+}
+
+.imageContainer {
+  height: clamp(12.5rem, 10.095rem + 12.03vw, 24.375rem);
+}
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

@@ -1,95 +1,133 @@
-import Image from "next/image";
+import CustomLink from "../components/CustomLink/CustomLink";
+import HeadingArticle from "../components/HeadingArticle/HeadingArticle";
+import UserIcon from "../../public/icons/user.svg";
+import ArrowIcon from "../../public/icons/arrow.svg";
+import SprayIcon from "../../public/icons/spray.svg";
+import ArroHint from "../../public/icons/hint-arrow.svg";
 import styles from "./page.module.css";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={styles.container}>
+      <article className={styles.article}>
+        <HeadingArticle title="ХОБЛ: мифы и реальность" />
+        <ul className={styles.links}>
+          <li>
+            <CustomLink to="/diagram">
+              <div className={styles.iconContainer}>
+                <Image src={UserIcon} alt="user-icon" />
+              </div>
+              <div className={styles.question}>
+                <p>
+                  ХОБЛ болеют <strong>преимущественно мужчины?</strong>
+                </p>
+              </div>
+              <div className={styles.text}>
+                <p>В десятилетнем исследовании «Генетическая эпидемиология ХОБЛ» (COPDGene) среди пациентов с ХОБЛ,</p>
+                <span> диагностированной до 55 лет, выявлено преобладание... </span>
+              </div>
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink to="/statistic">
+              <div className={styles.iconContainer}>
+                <Image src={ArrowIcon} alt="user-icon" />
+              </div>
+              <div className={styles.question}>
+                <p>
+                  <strong>Опасно</strong> не наличие заболевания, а обострения?
+                </p>
+              </div>
+              <div className={styles.text}>
+                <p>Большинство пациентов с ХОБЛ столкнется с обострениями: как минимум одно среднетяжелое или тяжелое обострение </p>
+                <span>случится в течение...</span>
+              </div>
+            </CustomLink>
+          </li>
+        </ul>
+      </article>
+      <article className={styles.article}>
+        <HeadingArticle title="Терапия ХОБЛ: что в фокусе?" />
+
+        <div className={styles.highlight}>
+          <p>Даже 1 среднетяжелое обострение — сигнал к увеличению объема терапии</p>
         </div>
-      </div>
+        <p className={styles.subheading}>Приоритетные направления фармакотерапевтической стратегии при ХОБЛ1:</p>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <ul className={styles.grid}>
+          <li>
+            <article className={styles.card}>
+              <div className={styles.icon}>
+                <Image src={SprayIcon} alt="spray" />
+                <span>1</span>
+              </div>
+              <h3>
+                Ингаляционный <strong>антихолинергик</strong>
+              </h3>
+              <p>
+                Ингибирует бронхоконстрикторные эффекты ацетилхолина, вступая с ним в конкурентный антагонизм за взаимодействие с эффекторными
+                мускариновыми рецепторами, дополняет и потенцирует эффект β2-агонистов1
+              </p>
+            </article>
+          </li>
+          <li>
+            <article className={styles.card}>
+              <div className={styles.icon}>
+                <Image src={SprayIcon} alt="spray" />
+                <span>2</span>
+              </div>
+              <h3>
+                Ингаляционный <strong>β2-агонист</strong>
+              </h3>
+              <p>
+                Вызывает бронходилатацию посредством релаксации гладкомышечных клеток бронхов независимо от характера констриктивных стимулов, т. е.
+                выступают в качестве функциональных антагонистов бронхоконстрикции
+              </p>
+            </article>
+          </li>
+          <li>
+            <article className={styles.card}>
+              <div className={styles.icon}>
+                <Image src={SprayIcon} alt="spray" />
+                <span>3</span>
+              </div>
+              <h3>
+                Ингаляционный <strong>глюкокортикостероид</strong> (ИГКС)
+              </h3>
+              <p>
+                Снижает частоту обострений, особенно в сочетании с ДДБА, подавляют хроническое воспаление при астме и снижают гиперреактивность
+                дыхательных путей
+              </p>
+            </article>
+          </li>
+        </ul>
+        <div className={styles.arrows}>
+          <div>
+            <Image src={ArroHint} alt="arrow-down" />
+          </div>
+          <div>
+            <Image src={ArroHint} alt="arrow-down" />
+          </div>
+        </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div className={styles.row}>
+          <div className={styles.cardDescription}>
+            <p>
+              Пациентам с ХОБЛ рекомендуется комбинирование бронходилататоров с разными механизмами действия; Назначение 2-х бронходилататоров из
+              группы длительнодействующих β2-агонистов (ДДБА) и длительнодействующих антихолинергиков (ДДАХ), действие которых дополняет и усиливает
+              друг друга1.
+            </p>
+          </div>
+          <div className={styles.cardDescription}>
+            <p>
+              Пациентам с ХОБЛ рекомендуется комбинирование бронходилататоров с разными механизмами действия; Назначение 2-х бронходилататоров из
+              группы длительнодействующих β2-агонистов (ДДБА) и длительнодействующих антихолинергиков (ДДАХ), действие которых дополняет и усиливает
+              друг друга1.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
   );
 }

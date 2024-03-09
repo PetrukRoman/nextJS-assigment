@@ -1,0 +1,56 @@
+.modalContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: var(--text-main);
+}
+.textContainer {
+  font-size: 24px;
+}
+.strongText {
+  font-weight: 700;
+}
+.heading {
+  text-align: center;
+  font-size: 30px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 54px;
+  list-style: none;
+}
+.card {
+  height: 468px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 15px;
+  padding: 30px 12px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgba(253, 217, 102, 0.25);
+
+  font-size: 26px;
+}
+.cardIcon {
+  width: 82px;
+  height: 133px;
+}
+.cardIcon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.card h3 {
+  height: 109px;
+  font-size: 96px;
+  font-weight: 700;
+}
+.descriprition {
+  font-size: 18px;
+  font-weight: 300;
+}

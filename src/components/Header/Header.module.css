@@ -1,0 +1,11 @@
+.header {
+  height: clamp(3.125rem, 2.783rem + 1.71vw, 4.813rem);
+  margin: 0 auto;
+  margin-bottom: clamp(1.25rem, 0.668rem + 2.91vw, 4.125rem);
+  max-width: var(--container-max-width);
+
+  background-image: url("../../../public/icons/header-figure.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}

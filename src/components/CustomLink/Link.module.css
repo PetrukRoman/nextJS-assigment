@@ -1,0 +1,14 @@
+.customLink {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+  padding: clamp(25px, 1.222rem + 1.7vw, 40px) clamp(20px, 0.909rem + 1.7vw, 35px);
+
+  border: 1px solid var(--text-main);
+  border-radius: 20px;
+
+  box-shadow: 0px 0px 25px 0px #8ea0ad59;
+
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,67 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 0.997rem + 1.27vw, 2.5rem);
+  color: var(--text-main);
+}
+
+.textContainer {
+  font-size: clamp(1rem, 0.899rem + 0.51vw, 1.5rem);
+}
+.strongText {
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+.heading {
+  text-align: center;
+  font-size: clamp(1.125rem, 0.973rem + 0.76vw, 1.875rem);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 54px;
+  list-style: none;
+}
+.card {
+  height: 468px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 15px;
+  padding: 30px 12px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgba(253, 217, 102, 0.25);
+
+  font-size: clamp(1rem, 0.873rem + 0.63vw, 1.625rem);
+}
+.cardIcon {
+  height: 130px;
+}
+.cardIcon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.card h3 {
+  font-size: clamp(2rem, 1.19rem + 4.05vw, 6rem);
+  font-weight: 700;
+}
+.descriprition {
+  font-size: clamp(0.875rem, 0.824rem + 0.25vw, 1.125rem);
+  font-weight: 300;
+}
+
+@media (max-width: 1085px) {
+  .card {
+    height: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .card {
+    height: 350px;
+  }
+}
